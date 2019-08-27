@@ -58,7 +58,7 @@ public abstract class Sandwich {
 		System.out.println("What a delicious meal");
 	}
 	
-	public abstract void listIngredients(String...strings);
+	public abstract void listIngredients();
 	
 	public abstract void sendBack();
 	

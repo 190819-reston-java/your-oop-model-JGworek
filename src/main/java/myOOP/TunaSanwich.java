@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class TunaSanwich extends Sandwich implements Refridgerator, Serializable {
 
-	static String meat = "Tuna";
+	static String meat = "tuna";
 	static int temperature = 40;
 	
 	public TunaSanwich(String ingredients, String catchyName) {
@@ -20,11 +20,9 @@ public class TunaSanwich extends Sandwich implements Refridgerator, Serializable
 
 	
 	
-	
 	public void coolDown(int degrees) {
 		System.out.println("You put the " + getCatchyName() + " in the refridgerator!");
 		System.out.println("Your " + getCatchyName() + " went from " + temperature + " degrees to " + (temperature-degrees) + " degrees");
-
 	}
 
 	@Override
@@ -34,8 +32,8 @@ public class TunaSanwich extends Sandwich implements Refridgerator, Serializable
 	
 	
 	@Override
-	public void listIngredients(String...strings) {
-		System.out.println("Your " + getCatchyName() + "Tuna Sandwhich's ingredients are: " + strings);
+	public void listIngredients() {
+		System.out.println("Your " + getCatchyName() + "Tuna Sandwhich's ingredients are: " + getIngredients().toLowerCase() + " and " + meat);
 
 	}
 

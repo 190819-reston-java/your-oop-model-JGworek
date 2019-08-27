@@ -13,11 +13,9 @@ public class Burger extends Sandwich implements Microwave, Serializable {
 
 	public Burger(String ingredients) {
 		super(ingredients);
-		// TODO Auto-generated constructor stub
 	}
 
 	public Burger() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public void heatUp(int degrees) {
@@ -31,8 +29,8 @@ public class Burger extends Sandwich implements Microwave, Serializable {
 	}
 
 	@Override
-	public void listIngredients(String...strings) {
-		System.out.println("Your " + getCatchyName() + "Burger's ingredients are: " + strings);
+	public void listIngredients() {
+		System.out.println("Your " + getCatchyName() + "Burger's ingredients are: " + getIngredients().toLowerCase() + ", and " + meat);
 
 	}
 

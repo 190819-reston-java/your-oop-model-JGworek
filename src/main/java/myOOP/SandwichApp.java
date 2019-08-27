@@ -6,8 +6,7 @@ public class SandwichApp {
 
 		Burger yum = new Burger("cheese" , "Burger with Cheese");
 		yum.heatUp(10);
-		System.out.println(yum.getIngredients());
-		
+		yum.listIngredients();
 	}
 
 }
