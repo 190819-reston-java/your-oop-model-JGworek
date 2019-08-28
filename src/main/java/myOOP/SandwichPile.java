@@ -19,4 +19,7 @@ public class SandwichPile extends ArrayList<Sandwich> {
 		// TODO Auto-generated constructor stub
 	}
 
+	public void throwOut() {
+		this.clear();
+	}
 }
