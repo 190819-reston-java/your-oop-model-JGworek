@@ -30,7 +30,7 @@ public class Burger extends Sandwich implements Microwave, Serializable {
 
 	@Override
 	public void listIngredients() {
-		System.out.println("Your " + getCatchyName() + "Burger's ingredients are: " + getIngredients().toLowerCase() + ", and " + meat);
+		System.out.println("Your " + getCatchyName() + "-Burger's ingredients are: " + getIngredients().toLowerCase() + ", and " + meat);
 
 	}
 
