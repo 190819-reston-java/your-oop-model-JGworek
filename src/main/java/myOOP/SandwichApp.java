@@ -1,6 +1,7 @@
 package myOOP;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class SandwichApp {
 
@@ -14,7 +15,7 @@ public class SandwichApp {
 		Sandwich carlosDefault = new Burger();
 		
 		
-		ArrayList<Sandwich> pileOfSandwiches = new SandwichPile();
+		List<Sandwich> pileOfSandwiches = new SandwichPile();
 		pileOfSandwiches.add(burger1);
 		pileOfSandwiches.add(tuna1);
 		pileOfSandwiches.add(carlosDefault);
