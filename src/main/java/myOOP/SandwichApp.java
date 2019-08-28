@@ -27,11 +27,13 @@ public class SandwichApp {
 			System.out.println("You should eat them all before they spoil.");
 		}
 		
-		System.out.println(pileOfSandwiches);
+		System.out.println("These are the sandwiches in the pile: " + pileOfSandwiches);
 	
 		((SandwichPile) pileOfSandwiches).throwOut();
 		
 		System.out.println("There are now " + pileOfSandwiches.size() + " sandwiches in the pile");
+		
+		System.out.println("These are the sandwiches in the pile: " + pileOfSandwiches);
 	}
 
 }
