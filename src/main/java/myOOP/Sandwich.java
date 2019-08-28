@@ -1,5 +1,7 @@
 package myOOP;
 
+import java.lang.ref.Reference;
+
 public abstract class Sandwich {
 
 	private String ingredients;
@@ -61,5 +63,12 @@ public abstract class Sandwich {
 	public abstract void listIngredients();
 	
 	public abstract void sendBack();
+
+	@Override
+	public String toString() {
+		return "Sandwich [ingredients=" + ingredients + ", catchyName=" + catchyName + "]";
+	}
+	
+	
 	
 }

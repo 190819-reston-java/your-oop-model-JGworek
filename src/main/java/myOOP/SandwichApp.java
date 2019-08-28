@@ -25,6 +25,8 @@ public class SandwichApp {
 		} else {
 			System.out.println("You should eat them all before they spoil.");
 		}
+		
+		System.out.println(pileOfSandwiches);
 	
 		((SandwichPile) pileOfSandwiches).throwOut();
 		
