@@ -2,7 +2,7 @@ package myOOP;
 
 import java.io.Serializable;
 
-public class TunaSanwich extends Sandwich implements Refridgerator, Serializable {
+public class TunaSanwich extends Sandwich implements Refridgerator, Serializable, Comparable<TunaSanwich> {
 
 	static String meat = "tuna";
 	static int temperature = 40;
@@ -21,6 +21,9 @@ public class TunaSanwich extends Sandwich implements Refridgerator, Serializable
 	
 	
 	public void coolDown(int degrees) {
+		if(degrees < 0) {
+			throw new NegativeCoolException();
+		}
 		System.out.println("You put the " + getCatchyName() + " in the refridgerator!");
 		System.out.println("Your " + getCatchyName() + " went from " + temperature + " degrees to " + (temperature-degrees) + " degrees");
 	}
@@ -43,4 +46,13 @@ public class TunaSanwich extends Sandwich implements Refridgerator, Serializable
 
 	}
 
+	public int compareTo(TunaSanwich o) {
+		String ourCatchyName = this.getCatchyName();
+		String otherCatchyName = o.getCatchyName();
+		char ourFirstChar = ourCatchyName.charAt(0);
+		char otherFirstChar = otherCatchyName.charAt(0);
+		int out = ourFirstChar - otherFirstChar;
+		return out;
+	}
 }
+

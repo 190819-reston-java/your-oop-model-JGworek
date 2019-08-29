@@ -2,7 +2,7 @@ package myOOP;
 
 import java.io.Serializable;
 
-public class Burger extends Sandwich implements Microwave, Serializable {
+public class Burger extends Sandwich implements Microwave, Serializable, Comparable<Burger> {
 
 	static String meat = "ground beef";
 	static int temperature = 70;
@@ -19,6 +19,9 @@ public class Burger extends Sandwich implements Microwave, Serializable {
 	}
 
 	public void heatUp(int degrees) {
+		if(degrees < 0) {
+			throw new NegativeHeatException();
+		}
 		System.out.println("You put the " + getCatchyName() + " in the microwave!");
 		System.out.println("Your " + getCatchyName() + " went from " + temperature + " degrees to " + (temperature+degrees) + " degrees");
 	}
@@ -40,4 +43,12 @@ public class Burger extends Sandwich implements Microwave, Serializable {
 
 	}
 
+	public int compareTo(Burger o) {
+		String ourCatchyName = this.getCatchyName();
+		String otherCatchyName = o.getCatchyName();
+		char ourFirstChar = ourCatchyName.charAt(0);
+		char otherFirstChar = otherCatchyName.charAt(0);
+		int out = ourFirstChar - otherFirstChar;
+		return out;
+	}
 }
