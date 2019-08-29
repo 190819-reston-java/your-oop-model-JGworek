@@ -26,6 +26,15 @@ public class Burger extends Sandwich implements Microwave, Serializable, Compara
 		System.out.println("Your " + getCatchyName() + " went from " + temperature + " degrees to " + (temperature+degrees) + " degrees");
 	}
 	
+	public void putInMicrowave(int degrees) {
+		try {
+			heatUp(degrees);
+		} catch (NegativeHeatException e) {
+			System.out.println("How do you heat up something negative degrees!?");
+			System.out.println("Your Burger will just get cold!");
+		}
+	}
+	
 	@Override
 	public void eatSandwich() {
 		System.out.println("Only three cows were murdered in the making of this sandwhich.");

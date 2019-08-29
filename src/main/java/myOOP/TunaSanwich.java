@@ -18,21 +18,27 @@ public class TunaSanwich extends Sandwich implements Refridgerator, Serializable
 	public TunaSanwich() {
 	}
 
-	
-	
 	public void coolDown(int degrees) {
 		if(degrees < 0) {
-			throw new NegativeCoolException();
+			 new NegativeCoolException();
 		}
 		System.out.println("You put the " + getCatchyName() + " in the refridgerator!");
 		System.out.println("Your " + getCatchyName() + " went from " + temperature + " degrees to " + (temperature-degrees) + " degrees");
 	}
 
+	public void putInFridge(int degrees) {
+		try {
+			coolDown(degrees);
+		} catch (NegativeCoolException e) {
+			System.out.println("How do you cool down something negative degrees!?");
+			System.out.println("Hot tuna is gross!");
+		}
+	}
+	
 	@Override
 	public void eatSandwich() {
 		System.out.println("Don't you love the taste of the sea!?");
 	}
-	
 	
 	@Override
 	public void listIngredients() {

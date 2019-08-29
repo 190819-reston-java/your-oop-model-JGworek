@@ -11,11 +11,16 @@ public class SandwichApp {
 	public static void main(String[] args) {
 
 		Burger yum = new Burger("cheese" , "Burger with Cheese");
-		yum.heatUp(10);
+		
+		
+		yum.putInMicrowave(-5);
+		
+		
 		yum.listIngredients();
 		Burger burger1 = new Burger("cheese", "The cheeseman");
 		TunaSanwich tuna1 = new TunaSanwich("cheese", "The cheesewoman");
 		Sandwich carlosDefault = new Burger();
+		
 		
 		
 		List<Sandwich> pileOfSandwiches = new SandwichPile();
@@ -23,7 +28,7 @@ public class SandwichApp {
 		pileOfSandwiches.add(tuna1);
 		pileOfSandwiches.add(carlosDefault);
 		
-		
+		tuna1.putInFridge(10);
 		
 		System.out.println("There are " + pileOfSandwiches.size() + " sandwiches in the pile");
 		if (pileOfSandwiches.size() > 5) {

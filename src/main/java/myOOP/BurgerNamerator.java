@@ -10,5 +10,4 @@ public class BurgerNamerator implements Comparator<Burger> {
 		String burgerTwoCatchyName = o2.getCatchyName();
 		return burgerOneCatchyName.compareTo(burgerTwoCatchyName);
 	}
-
 }
