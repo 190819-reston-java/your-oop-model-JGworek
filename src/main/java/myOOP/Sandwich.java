@@ -60,6 +60,10 @@ public abstract class Sandwich {
 		System.out.println("What a delicious meal");
 	}
 	
+	public void eatSandwich(int i) {
+		System.out.println("You attempt to eat " + i + " Sandwiches like a champ.");
+	}
+	
 	public abstract void listIngredients();
 	
 	public abstract void sendBack();
